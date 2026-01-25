@@ -1,17 +1,14 @@
-//
-//  first_projectApp.swift
-//  first_project
-//
-//  Created by Mac Mini- 04 on 22/1/26.
-//
-
 import SwiftUI
 
 @main
 struct first_projectApp: App {
+
+    @StateObject private var appState = AppStateManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(appState) 
         }
     }
 }
